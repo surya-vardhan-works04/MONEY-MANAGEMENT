@@ -1,0 +1,69 @@
+:root {
+  --bs-nav-underline-gap: 1rem;
+  --bs-nav-underline-link-active-color: black;
+}
+
+.nav {
+  display: flex;
+  gap: var(--bs-nav-underline-gap);
+  list-style: none;
+  padding: 1rem;
+  margin: 0;
+  background-color:rgba(57, 121, 222, 0.5);
+}
+
+.nav-item:hover {
+  text-decoration: underline rgb(3, 11, 43);
+}
+
+.nav-link {
+  text-decoration: none;
+  color: black;
+  padding-bottom: 4px;
+  border-bottom: var(--bs-nav-underline-border-width) solid transparent;
+  transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+  border-bottom: var(--bs-nav-underline-border-width) solid lightgray;
+}
+
+.nav-link.active {
+  color: var(--bs-nav-underline-link-active-color);
+  border-bottom: var(--bs-nav-underline-border-width) solid currentColor;
+}
+.nav-item{
+  padding-left: 20%;
+}
+body{
+  padding: top 10px; ;
+  background-image:url(moneymanagementbackground.jpg);
+}
+.logo{
+  display: flex;
+  img{
+    width: 50px;
+    height: 50px;
+    padding-top: 10px;
+    border-radius:50%;
+  }
+  h1{
+    color:rgb(39, 81, 54);
+  };
+}
+.moneyentry{
+  margin-left: 350px;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  width: 300px;
+  height: 300px;
+  border-radius: 100px;
+  
+  input{
+    padding-top: 10px;
+    margin: 10px;
+  }
+  background-color: rgb(234, 240, 238,0.5);
+  
+}

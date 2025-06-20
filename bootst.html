@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-image:url(moneymanagementbackground.jpg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.auth-container {
+  background: rgb(233, 230, 230,0.25);
+  padding: 2rem 2.5rem;
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+  width: 350px;
+}
+
+.auth-container h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+
+.auth-container form {
+  display: flex;
+  flex-direction: column;
+}
+
+.auth-container input[type="email"],
+.auth-container input[type="password/text"] {
+  padding: 12px;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  transition: border 0.3s;
+}
+
+.auth-container input:focus {
+  border-color: #667eea;
+  outline: none;
+}
+
+.auth-container button {
+  background-color: #667eea;
+  color: #fff;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.auth-container button:hover {
+  background-color: #5a67d8;
+}
+
+.auth-container .switch-link {
+  margin-top: 1rem;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+.auth-container .switch-link a {
+  color: #667eea;
+  text-decoration: unset;
+  font-weight: bold;
+}
+
+.auth-container .switch-link a:hover {
+  text-decoration: underline;
+}
+.passcheck
+{
+  display: inline-flexbox;
+}
+    </style>
+</head>
+<body>
+    <div class="auth-container">
+    <h2>Login</h2>
+    <form action="/login" method="POST">
+      <input type="email" name="email" placeholder="Email" required />
+      <input type="password" name="password" placeholder="Password" required id="passworde" value="mypass"/>
+      <div class="passcheck">
+     <input type="checkbox" onclick="passshow()"/>password show
+     </div>
+<script>
+  function passshow()
+  {
+    var x=document.getElementById("passworde");
+    if(x.type ==="password"){
+      x.type="text";
+    }
+    else{
+      x.type="password";
+    }
+  }
+</script>
+      <button type="submit">Log In</button>
+    </form>
+    <div class="switch-link">
+      Don't have an account? <a href="signup.html">Sign Up</a>
+    </div>
+  </div>
+</body>
+</html>
